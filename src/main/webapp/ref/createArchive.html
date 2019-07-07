@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Create Archive</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<h1>Create Archive</h1>
+<h2>Method</h2>
+<p>PUT /rest/archive/{archivename}</p>
+<h3>Path Parameters</h3>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Name</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">archivename</td>
+<td style="width: 542.6px;">The name of the ZIP archive.</td>
+</tr>
+</tbody>
+</table>
+<h3>Result</h3>
+<p>A JSON object containing confirmation or error status.</p>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Name</td>
+<td style="width: 59px;">Value</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">status</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">Value "ok" or "error"</td>
+</tr>
+<tr>
+<td style="width: 59px;">filename</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">If status "ok", filename of uploaded archive.</td>
+</tr>
+<tr>
+<td style="width: 59px;">message</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">If status "error", description of the error.</td>
+</tr>
+</tbody>
+</table>
+<h3>Response Codes</h3>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Code</td>
+<td style="width: 59px;">Media Type</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">200</td>
+<td style="width: 59px;">application/json</td>
+<td style="width: 542.6px;">Request successful.</td>
+</tr>
+</tbody>
+</table>
+<h3>Example</h3>
+<p>PUT&nbsp;<a href="http://localhost:8080/webzip/rest/archive/backup.zip">http://localhost:8080/webzip/rest/archive/new.zip</a></p>
+<p>&nbsp;</p>
+    </body>
+</html>

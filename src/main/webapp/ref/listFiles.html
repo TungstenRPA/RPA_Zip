@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>List Files</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<h1>List Files</h1>
+<p>List all folder/files of an archive.</p>
+<h2>Method</h2>
+<p>GET /rest/archive/{archivename}/content</p>
+<h3>Path Parameters</h3>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Name</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">archivename</td>
+<td style="width: 542.6px;">The name of the ZIP archive.</td>
+</tr>
+</tbody>
+</table>
+<h3>Result</h3>
+<p>A JSON array of files.</p>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Name</td>
+<td style="width: 59px;">Value</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">archive</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">Archive name</td>
+</tr>
+<tr>
+<td style="width: 59px;">content</td>
+<td style="width: 59px;">Array</td>
+<td style="width: 542.6px;">Array of files</td>
+</tr>
+<tr>
+<td style="width: 59px;">path</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">Path of file location within archive</td>
+</tr>
+<tr>
+<td style="width: 59px;">name</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">File name</td>
+</tr>
+<tr>
+<td style="width: 59px;">length</td>
+<td style="width: 59px;">Integer</td>
+<td style="width: 542.6px;">File size</td>
+</tr>
+<tr>
+<td style="width: 59px;">lastModified</td>
+<td style="width: 59px;">Date</td>
+<td style="width: 542.6px;">Last modified date</td>
+</tr>
+<tr>
+<td style="width: 59px;">type</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">Values: file or folder</td>
+</tr>
+</tbody>
+</table>
+<pre style="background-color: silver;">{<br />&nbsp; &nbsp;"archive" : "backup.zip",<br />&nbsp; &nbsp;"content" : [<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "path" : "",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name" : "global.xml",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "length" : 8209,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "lastModified" : "Tue Dec 18 17:43:52 CET 2018",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type" : "file"<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "path" : "",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name" : "Project_Default project",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "length" : "0",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "lastModified" : "Thu Jun 27 08:38:45 CEST 2019",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type" : "folder"<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "path" : "Project_Default project/",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name" : "project.xml",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "length" : 543,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "lastModified" : "Tue Dec 18 17:43:52 CET 2018",<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "type" : "file"<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;]<br />}</pre>
+<h3>Response Codes</h3>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Code</td>
+<td style="width: 59px;">Media Type</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">200</td>
+<td style="width: 59px;">application/json</td>
+<td style="width: 542.6px;">Request successful.</td>
+</tr>
+</tbody>
+</table>
+<h3>Example</h3>
+<p>GET&nbsp;<a href="http://localhost:8080/webzip/rest/archive/backup.zip">http://localhost:8080/webzip/rest/archive</a></p>
+<p>&nbsp;</p>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>List Archives</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<h1>List Archives</h1>
+<p>List of all archives.</p>
+<h2>Method</h2>
+<p>GET /rest/archive/</p>
+<h3>Result</h3>
+<p>A JSON array of archives.</p>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Name</td>
+<td style="width: 59px;">Value</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">name</td>
+<td style="width: 59px;">String</td>
+<td style="width: 542.6px;">Archive name</td>
+</tr>
+<tr>
+<td style="width: 59px;">length</td>
+<td style="width: 59px;">Integer</td>
+<td style="width: 542.6px;">Archive size</td>
+</tr>
+<tr>
+<td style="width: 59px;">lastModified</td>
+<td style="width: 59px;">Date</td>
+<td style="width: 542.6px;">Last modified date</td>
+</tr>
+</tbody>
+</table>
+<h3>Response Codes</h3>
+<table style="width: 612.6px; height: 89px;" border="1">
+<tbody>
+<tr>
+<td style="width: 59px;">Code</td>
+<td style="width: 59px;">Media Type</td>
+<td style="width: 542.6px;">Description</td>
+</tr>
+<tr>
+<td style="width: 59px;">200</td>
+<td style="width: 59px;">application/json</td>
+<td style="width: 542.6px;">Request successful.</td>
+</tr>
+</tbody>
+</table>
+<h3>Example</h3>
+<p>GET&nbsp;<a href="http://localhost:8080/webzip/rest/archive/backup.zip">http://localhost:8080/webzip/rest/archive</a></p>
+<p>&nbsp;</p>
+    </body>
+</html>
