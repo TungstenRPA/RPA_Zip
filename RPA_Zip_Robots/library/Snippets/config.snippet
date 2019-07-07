@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.4.0.0</version>
+    </saved-by-versions>
+    <referenced-types/>
+    <referenced-snippets/>
+    <triggers/>
+    <typed-variables/>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">apikey</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference" id="0">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">x-webzip-api-key: 3b91cab8-926f-49b6-ba00-920bcf934c2a</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class" id="1">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">host</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" idref="0"/>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="value" class="AttributeAssignment">
+            <property name="attributeValue" class="String">http://localhost:8084</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" idref="1"/>
+          </property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="2"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="3">
+        <property name="name" class="String">Do Nothing</property>
+        <property name="stepAction" class="DoNothing"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean">true</property>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="4"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="3"/>
+        <to idref="4"/>
+      </object>
+    </edges>
+  </body>
+</object>

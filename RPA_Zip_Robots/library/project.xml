@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project id="1">
+  <name>webzip</name>
+  <cluster id="2">
+    <name>Production</name>
+  </cluster>
+  <rootfolder id="3">
+    <folder id="4">
+      <name>snippets</name>
+      <parent class="rootfolder" reference="3"/>
+    </folder>
+    <folder id="5">
+      <name>types</name>
+      <parent class="rootfolder" reference="3"/>
+    </folder>
+    <project reference="1"/>
+  </rootfolder>
+  <robot id="6">
+    <name>01_uploadArchive</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="7">2019-06-27 08:11:38.981 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="8">
+    <name>02_createArchive</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="9">2019-06-27 08:11:39.212 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="10">
+    <name>03_listArchives</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="11">2019-06-27 08:11:39.341 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="12">
+    <name>04_listFiles</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="13">2019-06-27 08:11:39.444 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="14">
+    <name>05_uploadFile</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="15">2019-06-27 08:11:39.555 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="16">
+    <name>06_makeDirectory</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="17">2019-06-27 08:11:39.665 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="18">
+    <name>07_deleteFileOrFolder</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="19">2019-06-27 08:11:39.764 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="20">
+    <name>08_downloadFile</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="21">2019-06-27 08:11:39.856 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="22">
+    <name>09_downloadArchive</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="23">2019-06-27 08:11:39.965 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="24">
+    <name>10_deleteArchive</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="25">2019-06-27 08:11:40.62 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="26">
+    <name>ExampleCreateArchive</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="27">2019-06-28 06:06:01.875 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="28">
+    <name>ExampleDeleteArchives</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="29">2019-06-27 08:11:59.751 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="30">
+    <name>ExampleExtractArchive</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="31">2019-06-28 06:06:01.612 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robot id="32">
+    <name>GenerateServiceKey</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="3"/>
+    <lastmodified id="33">2019-06-28 06:06:01.759 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </robot>
+  <robotBlock id="34">
+    <project reference="1"/>
+    <name>01_uploadArchive</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="6"/>
+  </robotBlock>
+  <robotBlock id="35">
+    <project reference="1"/>
+    <name>02_createArchive</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="8"/>
+  </robotBlock>
+  <robotBlock id="36">
+    <project reference="1"/>
+    <name>03_listArchives</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="10"/>
+  </robotBlock>
+  <robotBlock id="37">
+    <project reference="1"/>
+    <name>04_listFiles</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="12"/>
+  </robotBlock>
+  <robotBlock id="38">
+    <project reference="1"/>
+    <name>05_uploadFile</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="14"/>
+  </robotBlock>
+  <robotBlock id="39">
+    <project reference="1"/>
+    <name>06_makeDirectory</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="16"/>
+  </robotBlock>
+  <robotBlock id="40">
+    <project reference="1"/>
+    <name>09_downloadArchive</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="22"/>
+  </robotBlock>
+  <robotBlock id="41">
+    <project reference="1"/>
+    <name>07_deleteFileOrFolder</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="18"/>
+  </robotBlock>
+  <robotBlock id="42">
+    <project reference="1"/>
+    <name>10_deleteArchive</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="24"/>
+  </robotBlock>
+  <robotBlock id="43">
+    <project reference="1"/>
+    <name>08_downloadFile</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="20"/>
+  </robotBlock>
+  <robotBlock id="44">
+    <project reference="1"/>
+    <name>ExampleCreateArchive</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="26"/>
+  </robotBlock>
+  <robotBlock id="45">
+    <project reference="1"/>
+    <name>ExampleExtractArchive</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="30"/>
+  </robotBlock>
+  <robotBlock id="46">
+    <project reference="1"/>
+    <name>ExampleDeleteArchives</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="28"/>
+  </robotBlock>
+  <robotBlock id="47">
+    <project reference="1"/>
+    <name>GenerateServiceKey</name>
+    <namedBlock>true</namedBlock>
+    <robot reference="32"/>
+  </robotBlock>
+  <type id="48">
+    <name>example</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="5"/>
+    <lastmodified id="49">2019-06-25 16:48:23.672 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </type>
+  <type id="50">
+    <name>param</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="5"/>
+    <lastmodified id="51">2019-06-21 15:47:55.972 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </type>
+  <type id="52">
+    <name>servicekey</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="5"/>
+    <lastmodified id="53">2019-06-28 06:06:01.173 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </type>
+  <snippet id="54">
+    <name>config</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="4"/>
+    <lastmodified id="55">2019-06-21 15:47:55.902 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </snippet>
+  <snippet id="56">
+    <name>http_status</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="4"/>
+    <lastmodified id="57">2019-06-21 15:47:55.802 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </snippet>
+  <snippet id="58">
+    <name>json_status</name>
+    <project reference="1"/>
+    <createdby>anonymousUser</createdby>
+    <folder reference="4"/>
+    <lastmodified id="59">2019-06-21 15:47:55.718 UTC</lastmodified>
+    <modifiedby>anonymousUser</modifiedby>
+  </snippet>
+  <authenticate>true</authenticate>
+  <forceServiceCluster>false</forceServiceCluster>
+  <vcs id="60">
+    <project reference="1"/>
+    <readOnly>false</readOnly>
+    <com.kapowtech.scheduler.server.entity.VcsItemConfiguration id="61">
+      <vcsConfiguration reference="60"/>
+      <itemType>robot</itemType>
+      <enabled>false</enabled>
+    </com.kapowtech.scheduler.server.entity.VcsItemConfiguration>
+    <com.kapowtech.scheduler.server.entity.VcsItemConfiguration id="62">
+      <vcsConfiguration reference="60"/>
+      <itemType>schedule</itemType>
+      <enabled>false</enabled>
+    </com.kapowtech.scheduler.server.entity.VcsItemConfiguration>
+    <com.kapowtech.scheduler.server.entity.VcsItemConfiguration id="63">
+      <vcsConfiguration reference="60"/>
+      <itemType>resource</itemType>
+      <enabled>false</enabled>
+    </com.kapowtech.scheduler.server.entity.VcsItemConfiguration>
+    <com.kapowtech.scheduler.server.entity.VcsItemConfiguration id="64">
+      <vcsConfiguration reference="60"/>
+      <itemType>type</itemType>
+      <enabled>false</enabled>
+    </com.kapowtech.scheduler.server.entity.VcsItemConfiguration>
+    <com.kapowtech.scheduler.server.entity.VcsItemConfiguration id="65">
+      <vcsConfiguration reference="60"/>
+      <itemType>snippet</itemType>
+      <enabled>false</enabled>
+    </com.kapowtech.scheduler.server.entity.VcsItemConfiguration>
+    <com.kapowtech.scheduler.server.entity.VcsItemConfiguration id="66">
+      <vcsConfiguration reference="60"/>
+      <itemType>oauth</itemType>
+      <enabled>false</enabled>
+    </com.kapowtech.scheduler.server.entity.VcsItemConfiguration>
+  </vcs>
+</project>

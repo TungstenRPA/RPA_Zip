@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.4.0.0</version>
+    </saved-by-versions>
+    <referenced-types/>
+    <referenced-snippets/>
+    <triggers/>
+    <typed-variables/>
+    <global-variables/>
+    <parameters/>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">httpHeader</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">13</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">httpStatus</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">7</property>
+        </property>
+      </property>
+    </object>
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">errorMsg</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="SimpleTypeReference">
+          <property name="simpleTypeId" class="Integer">12</property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Try" id="1"/>
+      <object class="Transition" serializationversion="3" id="2">
+        <property name="name" class="String">Test HTTP Status Code</property>
+        <property name="stepAction" class="TestValue" serializationversion="0">
+          <property name="condition" class="Expression" serializationversion="1">
+            <property name="text" class="String">httpStatus == 200</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="3">true</property>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="4">
+        <property name="name" class="String">OK 200</property>
+        <property name="stepAction" class="DoNothing"/>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="5">
+        <property name="name" class="String">Extract X-WEBZIP-ERROR</property>
+        <property name="stepAction" class="AssignVariable" serializationversion="4">
+          <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
+            <property name="dataConverters" class="DataConverters">
+              <element class="GetVariable" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">httpHeader</property>
+                </property>
+              </element>
+              <element class="Extract2DataConverter">
+                <property name="pattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PatternValueStringExpression">
+                  <property name="value" class="String">.*X-WEBZIP-ERROR:\s+(.*?)\n.*</property>
+                </property>
+              </element>
+            </property>
+          </property>
+          <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+            <property name="name" class="String">errorMsg</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0">
+          <property name="reportingViaAPI" class="Boolean">false</property>
+          <property name="reportingViaLog" class="Boolean">false</property>
+          <property name="controlFlow" class="kapow.robot.robomaker.robot.ControlFlow$NextAlternative"/>
+        </property>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+      <object class="Transition" serializationversion="3" id="6">
+        <property name="name" class="String" id="7">Generate Error</property>
+        <property name="stepAction" class="GenerateError">
+          <property name="errorMessageExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">errorMsg</property>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="End" id="8"/>
+      <object class="Transition" serializationversion="3" id="9">
+        <property name="name" idref="7"/>
+        <property name="stepAction" class="GenerateError">
+          <property name="errorMessageExpression" class="Expression" serializationversion="1">
+            <property name="text" class="String">"Status: " + httpStatus</property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="End" id="10"/>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="11"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="2"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="5"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="9"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="4"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="4"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="5"/>
+        <to idref="6"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="6"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="9"/>
+        <to idref="10"/>
+      </object>
+    </edges>
+  </body>
+</object>
